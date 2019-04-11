@@ -19,16 +19,18 @@ class BudgetManagerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBudgetManagerCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetTrue() {
+        var budgetManager = Budget(income: 1000, perMonth: true)
+        XCTAssert(budgetManager.getMonthlyIncome() == 1000)
+        budgetManager = Budget(income: 2000, perMonth: true)
+        XCTAssert(budgetManager.getMonthlyIncome() == 2000)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testBudgetManagerCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetFalse(){
+        var budgetManager = Budget(income: 12000, perMonth: false)
+        XCTAssert(budgetManager.getMonthlyIncome() == 1000)
+        budgetManager = Budget(income: 24000, perMonth: false)
+        XCTAssert(budgetManager.getMonthlyIncome() == 2000)
     }
-
+    
 }

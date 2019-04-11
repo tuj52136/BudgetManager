@@ -14,6 +14,7 @@
 		D01F43E1225F932300F15272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01F43DF225F932300F15272 /* LaunchScreen.storyboard */; };
 		D01F43EC225F932300F15272 /* BudgetManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43EB225F932300F15272 /* BudgetManagerTests.swift */; };
 		D01F43F7225F932300F15272 /* BudgetManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43F6225F932300F15272 /* BudgetManagerUITests.swift */; };
+		D01F4407225F93FA00F15272 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F4406225F93FA00F15272 /* Budget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D01F43F2225F932300F15272 /* BudgetManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01F43F6225F932300F15272 /* BudgetManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetManagerUITests.swift; sourceTree = "<group>"; };
 		D01F43F8225F932300F15272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D01F4406225F93FA00F15272 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D01F43D6225F932200F15272 /* AppDelegate.swift */,
+				D01F4406225F93FA00F15272 /* Budget.swift */,
 				D01F43D8225F932200F15272 /* ViewController.swift */,
 				D01F43DA225F932200F15272 /* Main.storyboard */,
 				D01F43DD225F932300F15272 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			files = (
 				D01F43D9225F932200F15272 /* ViewController.swift in Sources */,
 				D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */,
+				D01F4407225F93FA00F15272 /* Budget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
