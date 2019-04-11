@@ -10,9 +10,10 @@ import XCTest
 @testable import BudgetManager
 
 class BudgetManagerTests: XCTestCase {
-
+    var budgetManager = Budget(income: 1000, perMonth: true)
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+         budgetManager = Budget(income: 1000, perMonth: true)
     }
 
     override func tearDown() {
@@ -20,7 +21,6 @@ class BudgetManagerTests: XCTestCase {
     }
 
     func testBudgetManagerCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetTrue() {
-        var budgetManager = Budget(income: 1000, perMonth: true)
         XCTAssert(budgetManager.getMonthlyIncome() == 1000)
         budgetManager = Budget(income: 2000, perMonth: true)
         XCTAssert(budgetManager.getMonthlyIncome() == 2000)
@@ -33,4 +33,21 @@ class BudgetManagerTests: XCTestCase {
         XCTAssert(budgetManager.getMonthlyIncome() == 2000)
     }
     
+    func testBudgetManagerHasBudgetedInListOfBudgetItems(){
+        let listOfMonthlyBudgetItems = ["Groceries", "Housing", "Leisure", "Phone", "Electric", "Savings"]
+        for item in listOfMonthlyBudgetItems {
+            XCTAssert(budgetManager.getListOfMonthlyBudgetItems().contains(item))
+        }
+    }
+    
+    func testBudgetManagerBudgets50PerCentIncomeForHousingWhenMonthlyIncomeIs1000(){
+        let housingBudget = budgetManager.getBudgetedAmount(for: "Housing")
+        XCTAssert(housingBudget == 500)
+    }
+    
+    func testBudgetManagerBudgetBudgets25PerCentIncomeForGroceriesWhenMonthlyIncomeIs1000(){
+        let groceriesBudget = budgetManager.getBudgetedAmount(for: "Groceries")
+        XCTAssert(groceriesBudget == 250)
+    }
+
 }
