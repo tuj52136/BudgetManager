@@ -10,10 +10,10 @@ import XCTest
 @testable import BudgetManager
 
 class BudgetManagerTests: XCTestCase {
-    var budgetManager = MonthlyBudget(income: 1000, perMonth: true)
+    var monthlyBudget = MonthlyBudget(income: 1000, perMonth: true)
     
     override func setUp() {
-         budgetManager = MonthlyBudget(income: 1000, perMonth: true)
+         monthlyBudget = MonthlyBudget(income: 1000, perMonth: true)
     }
 
     override func tearDown() {
@@ -26,24 +26,37 @@ class BudgetManagerTests: XCTestCase {
         XCTAssert(budgetItem.name == "Groceries")
     }
     
-    func testBudgetManagerCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetTrue() {
-        XCTAssert(budgetManager.getMonthlyIncome() == 1000)
-        budgetManager = MonthlyBudget(income: 2000, perMonth: true)
-        XCTAssert(budgetManager.getMonthlyIncome() == 2000)
-    }
+//    func testMonthlyBudgetCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetTrue() {
+//        XCTAssert(monthlyBudget.getMonthlyIncome() == 1000)
+//        monthlyBudget = MonthlyBudget(income: 2000, perMonth: true)
+//        XCTAssert(monthlyBudget.getMonthlyIncome() == 2000)
+//    }
+//
+//    func testMonthlyBudgetCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetFalse(){
+//        var monthlyBudget = MonthlyBudget(income: 12000, perMonth: false)
+//        XCTAssert(monthlyBudget.getMonthlyIncome() == 1000)
+//        monthlyBudget = MonthlyBudget(income: 24000, perMonth: false)
+//        XCTAssert(monthlyBudget.getMonthlyIncome() == 2000)
+//    }
+//
 
-    func testBudgetManagerCallToGetMonthlyIncomeReturnsAmountInInitializerWhenPerMonthSetFalse(){
-        var budgetManager = MonthlyBudget(income: 12000, perMonth: false)
-        XCTAssert(budgetManager.getMonthlyIncome() == 1000)
-        budgetManager = MonthlyBudget(income: 24000, perMonth: false)
-        XCTAssert(budgetManager.getMonthlyIncome() == 2000)
-    }
-    
-
-    func testBudgetManagerBudgets50PerCentIncomeForHousingWhenMonthlyIncomeIs1000(){
-        budgetManager.addBudgetItem(item: BudgetItem(name: "Housing", amountBudgeted: 500))
-        let housingBudget = budgetManager.getBudgetItem(named: "Housing")!
+    func testMonthlyBudgetBudgets50PerCentIncomeForHousingWhenMonthlyIncomeIs1000(){
+        monthlyBudget.addBudgetItem(item: BudgetItem(name: "Housing", amountBudgeted: 500))
+        let housingBudget = monthlyBudget.getBudgetItem(named: "Housing")!
         XCTAssert(housingBudget.amountBudgeted == 500)
+    }
+
+    func testBudgetManagerHasRecurringItemsAfterInit(){
+        let yearlyIncome = 24000.0
+        let budgetManager = BudgetManagerModel(yearlyIncome: yearlyIncome)
+        let recurringItems = [BudgetItem(name: "Housing", amountBudgeted: (yearlyIncome / 12.0) * 0.5),
+                                BudgetItem(name: "Groceries", amountBudgeted: (yearlyIncome / 12.0) * 0.25),
+                                BudgetItem(name: "Misc", amountBudgeted: (yearlyIncome / 12.0) * 0.25)]
+        let budgetedItems = budgetManager.getRecurringBudgetItems()
+        recurringItems.forEach{ (item) in
+            XCTAssert(budgetedItems.contains(where: {$0.name == item.name}))
+        }
+        
     }
     
 }

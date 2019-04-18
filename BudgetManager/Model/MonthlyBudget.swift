@@ -1,6 +1,6 @@
 //
 //  Budget.swift
-//  BudgetManager
+//  MonthlyBudget
 //
 //  Created by Leo Vergnetti on 4/11/19.
 //  Copyright © 2019 Leo Vergnetti. All rights reserved.
@@ -17,7 +17,7 @@ struct MonthlyBudget {
         incomeForTheMonth = perMonth ? income : income / 12
     }
     
-    func getMonthlyIncome() -> Double{
+    private func getMonthlyIncome() -> Double{
         return incomeForTheMonth
     }
     

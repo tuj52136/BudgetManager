@@ -15,6 +15,7 @@
 		D01F43EC225F932300F15272 /* BudgetManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43EB225F932300F15272 /* BudgetManagerTests.swift */; };
 		D01F43F7225F932300F15272 /* BudgetManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43F6225F932300F15272 /* BudgetManagerUITests.swift */; };
 		D01F4407225F93FA00F15272 /* MonthlyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F4406225F93FA00F15272 /* MonthlyBudget.swift */; };
+		D046DA9B2268D51E005DEF82 /* BudgetManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046DA9A2268D51E005DEF82 /* BudgetManagerModel.swift */; };
 		D0939316226769EA007779A2 /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0939315226769EA007779A2 /* BudgetItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		D01F43F6225F932300F15272 /* BudgetManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetManagerUITests.swift; sourceTree = "<group>"; };
 		D01F43F8225F932300F15272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01F4406225F93FA00F15272 /* MonthlyBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudget.swift; sourceTree = "<group>"; };
+		D046DA9A2268D51E005DEF82 /* BudgetManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetManagerModel.swift; sourceTree = "<group>"; };
 		D0939315226769EA007779A2 /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,13 +103,11 @@
 		D01F43D5225F932200F15272 /* BudgetManager */ = {
 			isa = PBXGroup;
 			children = (
+				D046DA972268CEF4005DEF82 /* Model */,
+				D046DA992268CF30005DEF82 /* Controller */,
+				D046DA982268CF24005DEF82 /* View */,
 				D01F43D6225F932200F15272 /* AppDelegate.swift */,
-				D01F4406225F93FA00F15272 /* MonthlyBudget.swift */,
-				D0939315226769EA007779A2 /* BudgetItem.swift */,
-				D01F43D8225F932200F15272 /* ViewController.swift */,
-				D01F43DA225F932200F15272 /* Main.storyboard */,
 				D01F43DD225F932300F15272 /* Assets.xcassets */,
-				D01F43DF225F932300F15272 /* LaunchScreen.storyboard */,
 				D01F43E2225F932300F15272 /* Info.plist */,
 			);
 			path = BudgetManager;
@@ -129,6 +129,33 @@
 				D01F43F8225F932300F15272 /* Info.plist */,
 			);
 			path = BudgetManagerUITests;
+			sourceTree = "<group>";
+		};
+		D046DA972268CEF4005DEF82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D046DA9A2268D51E005DEF82 /* BudgetManagerModel.swift */,
+				D01F4406225F93FA00F15272 /* MonthlyBudget.swift */,
+				D0939315226769EA007779A2 /* BudgetItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D046DA982268CF24005DEF82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D01F43DA225F932200F15272 /* Main.storyboard */,
+				D01F43DF225F932300F15272 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D046DA992268CF30005DEF82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D01F43D8225F932200F15272 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01F43D9225F932200F15272 /* ViewController.swift in Sources */,
+				D046DA9B2268D51E005DEF82 /* BudgetManagerModel.swift in Sources */,
 				D0939316226769EA007779A2 /* BudgetItem.swift in Sources */,
 				D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */,
 				D01F4407225F93FA00F15272 /* MonthlyBudget.swift in Sources */,
