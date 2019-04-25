@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00A283A2272101500E3FE06 /* RecurringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A28392272101500E3FE06 /* RecurringViewController.swift */; };
 		D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43D6225F932200F15272 /* AppDelegate.swift */; };
 		D01F43D9225F932200F15272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43D8225F932200F15272 /* ViewController.swift */; };
 		D01F43DC225F932200F15272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01F43DA225F932200F15272 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00A28392272101500E3FE06 /* RecurringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringViewController.swift; sourceTree = "<group>"; };
 		D01F43D3225F932200F15272 /* BudgetManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01F43D6225F932200F15272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01F43D8225F932200F15272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				D01F43D8225F932200F15272 /* ViewController.swift */,
+				D00A28392272101500E3FE06 /* RecurringViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				D046DA9B2268D51E005DEF82 /* BudgetManagerModel.swift in Sources */,
 				D0939316226769EA007779A2 /* BudgetItem.swift in Sources */,
 				D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */,
+				D00A283A2272101500E3FE06 /* RecurringViewController.swift in Sources */,
 				D01F4407225F93FA00F15272 /* MonthlyBudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

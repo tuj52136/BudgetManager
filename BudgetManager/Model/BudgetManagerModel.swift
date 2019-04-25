@@ -9,18 +9,20 @@
 import Foundation
 
 struct BudgetManagerModel {
-    var yearlyIncome: Double
+    var monthlyIncome: Double
     var recurringItems : [BudgetItem]
+    var updatedBudgets = [MonthlyBudget]()
     
-    init(yearlyIncome: Double) {
-        self.yearlyIncome = yearlyIncome
-        recurringItems = [BudgetItem(name: "Housing", amountBudgeted: (yearlyIncome / 12.0) * 0.5),
-                          BudgetItem(name: "Groceries", amountBudgeted: (yearlyIncome / 12.0) * 0.25),
-                          BudgetItem(name: "Misc", amountBudgeted: (yearlyIncome / 12.0) * 0.25)]
+    init(monthlyIncome: Double) {
+        self.monthlyIncome = monthlyIncome
+        recurringItems = [BudgetItem(name: "Housing", amountBudgeted: (monthlyIncome / 12.0) * 0.5),
+                          BudgetItem(name: "Groceries", amountBudgeted: (monthlyIncome / 12.0) * 0.25),
+                          BudgetItem(name: "Misc", amountBudgeted: (monthlyIncome / 12.0) * 0.25)]
     }
     
     func getRecurringBudgetItems() -> [BudgetItem]{
         return recurringItems
     }
-
+    
+    
 }

@@ -9,15 +9,15 @@
 import Foundation
 
 struct MonthlyBudget {
-    
+    private var month: DateComponents?
     private var incomeForTheMonth : Double
     private var budgetItems = [BudgetItem]()
     
-    init(income: Double, perMonth: Bool) {
-        incomeForTheMonth = perMonth ? income : income / 12
+    init(income: Double) {
+        incomeForTheMonth = income
     }
     
-    private func getMonthlyIncome() -> Double{
+    func getMonthlyIncome() -> Double{
         return incomeForTheMonth
     }
     
