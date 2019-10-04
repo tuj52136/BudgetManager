@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D00A283A2272101500E3FE06 /* RecurringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A28392272101500E3FE06 /* RecurringViewController.swift */; };
+		9C45DD4F2280BD0700CF85F9 /* RecurringListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45DD4E2280BD0700CF85F9 /* RecurringListController.swift */; };
+		9C45DD512280C9D000CF85F9 /* RecurringCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45DD502280C9D000CF85F9 /* RecurringCellTableViewCell.swift */; };
+		9C45DD532280FCD300CF85F9 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45DD522280FCD300CF85F9 /* MonthlyViewController.swift */; };
+		9C45DD55228103FE00CF85F9 /* MonthlyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45DD54228103FE00CF85F9 /* MonthlyCellTableViewCell.swift */; };
 		D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43D6225F932200F15272 /* AppDelegate.swift */; };
 		D01F43D9225F932200F15272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F43D8225F932200F15272 /* ViewController.swift */; };
 		D01F43DC225F932200F15272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01F43DA225F932200F15272 /* Main.storyboard */; };
@@ -38,7 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D00A28392272101500E3FE06 /* RecurringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringViewController.swift; sourceTree = "<group>"; };
+		9C45DD4E2280BD0700CF85F9 /* RecurringListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringListController.swift; sourceTree = "<group>"; };
+		9C45DD502280C9D000CF85F9 /* RecurringCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecurringCellTableViewCell.swift; path = BudgetManager/Controller/RecurringCellTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		9C45DD522280FCD300CF85F9 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+		9C45DD54228103FE00CF85F9 /* MonthlyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyCellTableViewCell.swift; sourceTree = "<group>"; };
 		D01F43D3225F932200F15272 /* BudgetManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01F43D6225F932200F15272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01F43D8225F932200F15272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				D01F43DA225F932200F15272 /* Main.storyboard */,
+				9C45DD54228103FE00CF85F9 /* MonthlyCellTableViewCell.swift */,
+				9C45DD502280C9D000CF85F9 /* RecurringCellTableViewCell.swift */,
 				D01F43DF225F932300F15272 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -155,8 +163,9 @@
 		D046DA992268CF30005DEF82 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C45DD4E2280BD0700CF85F9 /* RecurringListController.swift */,
+				9C45DD522280FCD300CF85F9 /* MonthlyViewController.swift */,
 				D01F43D8225F932200F15272 /* ViewController.swift */,
-				D00A28392272101500E3FE06 /* RecurringViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,11 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C45DD532280FCD300CF85F9 /* MonthlyViewController.swift in Sources */,
+				9C45DD55228103FE00CF85F9 /* MonthlyCellTableViewCell.swift in Sources */,
 				D01F43D9225F932200F15272 /* ViewController.swift in Sources */,
+				9C45DD4F2280BD0700CF85F9 /* RecurringListController.swift in Sources */,
 				D046DA9B2268D51E005DEF82 /* BudgetManagerModel.swift in Sources */,
 				D0939316226769EA007779A2 /* BudgetItem.swift in Sources */,
 				D01F43D7225F932200F15272 /* AppDelegate.swift in Sources */,
-				D00A283A2272101500E3FE06 /* RecurringViewController.swift in Sources */,
+				9C45DD512280C9D000CF85F9 /* RecurringCellTableViewCell.swift in Sources */,
 				D01F4407225F93FA00F15272 /* MonthlyBudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,6 +522,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,6 +543,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +563,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManagerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -566,6 +583,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBB7THA55R;
 				INFOPLIST_FILE = BudgetManagerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

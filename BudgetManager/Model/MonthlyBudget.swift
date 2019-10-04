@@ -8,13 +8,21 @@
 
 import Foundation
 
-struct MonthlyBudget {
+class MonthlyBudget {
     private var month: DateComponents?
     private var incomeForTheMonth : Double
-    private var budgetItems = [BudgetItem]()
+    var budgetItems = [BudgetItem]()
     
     init(income: Double) {
         incomeForTheMonth = income
+    }
+    
+    func getTotalAmountBudgeted() -> Double {
+        return budgetItems.reduce(0){$0 + $1.amountBudgeted}
+    }
+    
+    func getTotalAmountSpent() -> Double {
+        return budgetItems.reduce(0){$0 + $1.amountSpent}
     }
     
     func getMonthlyIncome() -> Double{
@@ -35,7 +43,16 @@ struct MonthlyBudget {
         return foundItem
     }
     
-    mutating func addBudgetItem(item : BudgetItem) {
+    func addBudgetItem(item : BudgetItem) {
         budgetItems.append(item)
+    }
+    
+    func spend(amount : Double, onItemNamed name: String) {
+        budgetItems.forEach{
+            if $0.name == name {
+                $0.amountSpent += amount
+                print("spent from in budget :\(amount)")
+            }
+        }
     }
 }

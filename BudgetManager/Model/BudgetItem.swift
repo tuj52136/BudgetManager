@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct BudgetItem {
+class BudgetItem {
     var name: String
     var amountBudgeted : Double
+    var amountSpent : Double
+    
+    init(name : String, amountBudgeted : Double, amountSpent : Double) {
+        self.name = name
+        self.amountBudgeted = amountBudgeted
+        self.amountSpent = amountSpent
+    }
 }

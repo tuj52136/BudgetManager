@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! RecurringViewController
+        let destinationVC = segue.destination as! RecurringListController
         if let income = Double(incomeTextField.text!){
             let budgetManager = BudgetManagerModel(monthlyIncome: income)
             destinationVC.budgetManager = budgetManager
