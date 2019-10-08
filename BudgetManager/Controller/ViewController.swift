@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var welcomeView: UIView!
     @IBOutlet weak var createBudgetButton: UIButton!
     @IBOutlet weak var incomeTextField: UITextField!
     
@@ -17,6 +18,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        addLayerShadow(toLayer: welcomeView.layer)
+        addLayerShadow(toLayer: createBudgetButton.layer)
+//        welcomeView.layer.cornerRadius = CGFloat(5.0)
+//        welcomeView.layer.shadowOffset = CGSize(width: 2, height: 1)
+//        welcomeView.layer.shadowRadius = CGFloat(2.0)
+//        welcomeView.layer.shadowOpacity = 0.2
+//
+//        createBudgetButton.layer.cornerRadius = CGFloat(2.0)
+//        createBudgetButton.layer.shadowOffset
     }
 
     
@@ -29,6 +39,13 @@ class ViewController: UIViewController {
             let budgetManager = BudgetManagerModel(monthlyIncome: income)
             destinationVC.budgetManager = budgetManager
         }
+    }
+    
+    func addLayerShadow(toLayer layer: CALayer){
+        layer.cornerRadius = CGFloat(5.0)
+        layer.shadowOffset = CGSize(width: 2, height: 1)
+        layer.shadowRadius = CGFloat(2.0)
+        layer.shadowOpacity = 0.2
     }
 
 }
